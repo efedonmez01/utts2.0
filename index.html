@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UTTS Randevu Formu - Hızlı ve güvenli randevu alın!">
+    <title>UTTS Randevu Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #003366;
+        }
+        label {
+            margin-top: 15px;
+            display: block;
+            color: #333;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d99;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>UTTS Randevu Formu</h2>
+        <form action="https://formspree.io/f/xnnvdlpj" method="POST">
+            <label for="name">Ad Soyad:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="tc">TC Kimlik Numarası:</label>
+            <input type="text" id="tc" name="tc" required>
+
+            <label for="phone">Telefon Numarası:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">E-Posta Adresi:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="type">Bireysel/Kurumsal:</label>
+            <select id="type" name="type" required>
+                <option value="">Seçiniz</option>
+                <option value="genel">Bireysel</option>
+                <option value="yabanci">Kurumsal</option>
+            </select>
+
+            <label for="date">Randevu Tarihi:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Randevu Saati:</label>
+            <input type="time" id="time" name="time" min="10:00" max="18:00" required>
+
+            <label for="note">Ek Notlar:</label>
+            <textarea id="note" name="note" rows="3"></textarea>
+
+            <button type="submit">Randevu Al</button>
+        </form>
+        <div class="footer">
+            <p>© 2025 UTTS mezcar | MAİL KONULCAK</p>
+        </div>
+    </div>
+</body>
+</html>
